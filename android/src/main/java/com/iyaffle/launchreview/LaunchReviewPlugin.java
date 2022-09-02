@@ -66,7 +66,27 @@ public class LaunchReviewPlugin implements MethodCallHandler, FlutterPlugin, Act
             for (ResolveInfo otherApp: otherApps) {
                 // look for Google Play application
                 if (otherApp.activityInfo.applicationInfo.packageName
-                        .equals("com.android.vending")) {
+                        .equals("com.android.vending") || 
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.xiaomi.market") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.huawei.appmarket") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.bbk.appstore") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.oppo.market") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.sec.android.app.samsungapps") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.funbook.market") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.sogou.androidtool") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.lenovo.leos.appstore") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.yulong.android.coolmart") ||
+                    otherApp.activityInfo.applicationInfo.packageName
+                        .equals("com.tencent.android.qqdownloader")) {
 
                     ActivityInfo otherAppActivity = otherApp.activityInfo;
                     ComponentName componentName = new ComponentName(
